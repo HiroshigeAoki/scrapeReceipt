@@ -1,0 +1,5 @@
+DMM:
+  email: 
+  password: 
+  receipt_name:  # 領収証での名前
+  save_dir: # 保存先ディレクトリ
