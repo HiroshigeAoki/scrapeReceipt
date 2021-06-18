@@ -48,6 +48,8 @@ def printSetUp(save_dir):
         "use_system_default_printer": False,
     }
     # ch_options.add_argument("--headless")
+    ch_options.add_argument("--disable-dev-shm-usage")
+    ch_options.add_argument("--no-sandbox")
     ch_options.add_argument("--kiosk")
     ch_options.add_argument("--kiosk-printing")
     ch_options.add_experimental_option('prefs', prefs)
@@ -87,6 +89,7 @@ def main(config):
     # driver.execute_script('return window.print()')
     time.sleep(10) # save待ち
     os.rename(f'{save_dir}/領収書の発行 - DMM.com.pdf', f'{save_dir}/{month}月分領収証.pdf')
+    driver.close()
     driver.quit()
 
 
